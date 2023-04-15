@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/firstScreen">
+
+    <fragment
+        android:id="@+id/firstScreen"
+        android:name="com.example.colorguessgame.FirstScreen"
+        android:label="fragment_first_screen"
+        tools:layout="@layout/fragment_first_screen" >
+        <action
+            android:id="@+id/action_firstScreen_to_secondScreen"
+            app:destination="@id/secondScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondScreen"
+        android:name="com.example.colorguessgame.SecondScreen"
+        android:label="fragment_second_screen"
+        tools:layout="@layout/fragment_second_screen" >
+        <action
+            android:id="@+id/action_secondScreen_to_thirdScreen"
+            app:destination="@id/thirdScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdScreen"
+        android:name="com.example.colorguessgame.ThirdScreen"
+        android:label="fragment_third_screen"
+        tools:layout="@layout/fragment_third_screen" >
+        <action
+            android:id="@+id/action_thirdScreen_to_fourthScreen"
+            app:destination="@id/fourthScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/fourthScreen"
+        android:name="com.example.colorguessgame.FourthScreen"
+        android:label="fragment_fourth_screen"
+        tools:layout="@layout/fragment_fourth_screen" >
+        <action
+            android:id="@+id/action_fourthScreen_to_resultPopUp"
+            app:destination="@id/resultPopUp" />
+    </fragment>
+    <dialog
+        android:id="@+id/resultPopUp"
+        android:name="com.example.colorguessgame.ResultPopUp"
+        android:label="fragment_result_pop_up"
+        tools:layout="@layout/fragment_result_pop_up" >
+        <action
+            android:id="@+id/action_resultPopUp_to_secondScreen"
+            app:destination="@id/secondScreen" />
+        <action
+            android:id="@+id/action_resultPopUp_to_answerList"
+            app:destination="@id/answerList" />
+    </dialog>
+    <fragment
+        android:id="@+id/answerList"
+        android:name="com.example.colorguessgame.AnswerList"
+        android:label="fragment_answer_list"
+        tools:layout="@layout/fragment_answer_list" >
+        <action
+            android:id="@+id/action_answerList_to_secondScreen"
+            app:destination="@id/secondScreen" />
+    </fragment>
+</navigation>
